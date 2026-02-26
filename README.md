@@ -134,7 +134,7 @@ python -m pip install -r requirements.txt
 # ▶️ Rulare aplicație
 
 ``` bash
-python 3app.py
+python app.py
 ```
 
 Acces local:
