@@ -3,7 +3,7 @@
 ## 📸 Interfața aplicației
 
 <p align="center">
-  <img src="assets/whisper.png" width="900">
+  <img src="whisper.png" width="900">
 </p>
 
 O aplicație de transcriere pregătită pentru producție, construită cu\
