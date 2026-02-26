@@ -1,0 +1,1 @@
+# whisper-srt-gui
