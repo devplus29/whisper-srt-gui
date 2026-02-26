@@ -1,99 +1,101 @@
 # 🎙 Whisper SRT GUI
 
-A production-ready transcription application built with
-**faster-whisper** and **Gradio**, designed for accurate audio/video
-transcription into **TXT and SRT formats**, with advanced text
-correction, speaker diarization and translation capabilities.
+O aplicație de transcriere pregătită pentru producție, construită cu\
+**faster-whisper** și **Gradio**, concepută pentru transcriere
+audio/video precisă în **format TXT și SRT**, cu funcții avansate de
+corectare a textului, diarizare a vorbitorilor și traducere.
+
+**Interfața aplicației este complet în limba română 🇷🇴**
 
 ------------------------------------------------------------------------
 
-## ✨ Overview
+## ✨ Prezentare generală
 
-Whisper SRT GUI provides:
+Whisper SRT GUI oferă:
 
--   🎧 High-accuracy transcription
--   📄 TXT & SRT export
--   🧠 Intelligent text correction (glossary + rule engine)
--   👥 Optional speaker diarization (pyannote)
--   🌍 Translation support (OpenAI + offline Argos fallback)
--   ⚡ Full-length audio processing (no truncation)
--   🔁 Repetition reduction & duplicate filtering
+-   🎧 Transcriere de înaltă acuratețe\
+-   📄 Export în format TXT & SRT\
+-   🧠 Corectare inteligentă a textului (glosar + motor de reguli)\
+-   👥 Diarizare opțională a vorbitorilor (pyannote)\
+-   🌍 Suport pentru traducere (OpenAI + alternativă offline Argos)\
+-   ⚡ Procesare completă a fișierelor audio (fără trunchiere)\
+-   🔁 Reducerea repetițiilor și filtrarea duplicatelor
 
 ------------------------------------------------------------------------
 
-# 🚀 Key Features
+# 🚀 Funcționalități principale
 
-## 🎧 Transcription
+## 🎧 Transcriere
 
--   Supports: `.mp3`, `.wav`, `.m4a`, `.mp4`
--   Generates:
+-   Formate suportate: `.mp3`, `.wav`, `.m4a`, `.mp4`
+-   Generează:
     -   `transcript_raw_*.txt`
     -   `transcript_raw_*.srt`
     -   `transcript_corrected_*.txt`
     -   `transcript_corrected_*.srt`
--   Supports files up to **1 hour** (configurable)
+-   Suportă fișiere de până la **1 oră** (configurabil)
 
 ------------------------------------------------------------------------
 
-## 🧠 Text Correction (Learning System)
+## 🧠 Corectare text (Sistem de învățare)
 
--   Glossary-based correction (1 term / line)
--   Custom rule engine (`Greșit ⇒ Corect` format)
--   Dictionary import via `user_data/dictionaries`
-
-------------------------------------------------------------------------
-
-## 👥 Speaker Diarization (Optional)
-
--   Powered by `pyannote.audio`
--   Requires Hugging Face token (`HF_TOKEN`)
--   Automatically labels segments (Vorbitor 1, Vorbitor 2, etc.)
+-   Corectare pe bază de glosar (1 termen / linie)
+-   Motor personalizat de reguli (`Greșit ⇒ Corect`)
+-   Import dicționare prin `user_data/dictionaries`
 
 ------------------------------------------------------------------------
 
-## 🌍 Translation (Optional)
+## 👥 Diarizare vorbitori (Opțional)
 
-### OpenAI (Cloud-based)
-
--   Requires `OPENAI_API_KEY`
-
-### Argos Translate (Offline Fallback)
-
--   Works without internet
--   Requires installed language packages
+-   Bazată pe `pyannote.audio`
+-   Necesită token Hugging Face (`HF_TOKEN`)
+-   Etichetează automat segmentele (Vorbitor 1, Vorbitor 2 etc.)
 
 ------------------------------------------------------------------------
 
-# 🔒 Audio Integrity Guarantee
+## 🌍 Traducere (Opțional)
 
-✔ Converts input to WAV (16kHz)\
-✔ Uses `vad_filter=False` (no voice activity cutting)\
-✔ Processes full audio duration
+### OpenAI (Cloud)
 
-If audio is 10 minutes → transcript reflects 10 minutes\
-If audio is 60 minutes → transcript reflects full duration
+-   Necesită `OPENAI_API_KEY`
+
+### Argos Translate (Offline)
+
+-   Funcționează fără internet
+-   Necesită instalarea pachetelor de limbă
 
 ------------------------------------------------------------------------
 
-# 🖥 System Requirements
+# 🔒 Garanția integrității audio
+
+✔ Convertește automat fișierul în WAV (16kHz)\
+✔ Folosește `vad_filter=False` (nu taie segmentele de voce)\
+✔ Procesează întreaga durată a fișierului audio
+
+Dacă audio are 10 minute → transcrierea reflectă 10 minute\
+Dacă audio are 60 minute → transcrierea reflectă durata completă
+
+------------------------------------------------------------------------
+
+# 🖥 Cerințe de sistem
 
 ## Windows
 
 -   Python 3.10+
--   FFmpeg + FFprobe added to PATH
--   (Optional) NVIDIA CUDA for GPU acceleration
+-   FFmpeg + FFprobe adăugate în PATH
+-   (Opțional) NVIDIA CUDA pentru accelerare GPU
 
 ## Linux (Ubuntu 22.04)
 
 -   Python 3.10+
--   FFmpeg installed via apt
--   (Optional) NVIDIA CUDA for GPU acceleration
+-   FFmpeg instalat prin apt
+-   (Opțional) NVIDIA CUDA pentru accelerare GPU
 
 ------------------------------------------------------------------------
 
-# 📦 Installation
+# 📦 Instalare
 
-## Clone repository
+## Clonare repository
 
 ``` bash
 git clone <repo_url>
@@ -123,25 +125,25 @@ python -m pip install -r requirements.txt
 
 ------------------------------------------------------------------------
 
-# ▶️ Run Application
+# ▶️ Rulare aplicație
 
 ``` bash
 python 3app.py
 ```
 
-Access locally:
+Acces local:
 
 http://127.0.0.1:7860
 
 ------------------------------------------------------------------------
 
-# 📁 Project Structure
+# 📁 Structura proiectului
 
-    3app.py              # Main Gradio application
-    corrections.py       # Glossary & rule engine
-    requirements.txt     # Dependencies
-    start.bat            # Windows launcher
-    start.sh             # Linux launcher
+    3app.py              # Aplicația principală Gradio
+    corrections.py       # Glosar & motor de reguli
+    requirements.txt     # Dependențe
+    start.bat            # Lansator Windows
+    start.sh             # Lansator Linux
 
     user_data/
       glossary.txt
@@ -149,10 +151,10 @@ http://127.0.0.1:7860
       dictionaries/
       outputs/
 
-    tmp/                 # Temporary WAV processing
+    tmp/                 # Procesare temporară WAV
 
 ------------------------------------------------------------------------
 
-# 📜 License
+# 📜 Licență
 
-MIT License recommended.
+Se recomandă licența MIT.
