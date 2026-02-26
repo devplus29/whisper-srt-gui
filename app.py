@@ -51,7 +51,7 @@ MAX_AUDIO_SECONDS = 3600  # 1 oră
 PREVIEW = 15000  # limită preview UI (download = complet)
 
 FOOTER_FILE = USER_DATA / "footer.md"
-DEFAULT_FOOTER = "Parlamentul Republicii Moldova © 2026"
+DEFAULT_FOOTER = "© 2026"
 
 
 # -------- Utils --------
@@ -661,7 +661,7 @@ def build_ui():
     """
 
     with gr.Blocks(title="Whisper SRT GUI (Simplu)", css=css) as demo:
-        gr.Markdown("### Elaborat de Direcția Tehnologii Informaționale și Comunicații\n")
+        gr.Markdown("### Whisper\n")
 
         with gr.Tabs():
             with gr.Tab("Transcriere"):
