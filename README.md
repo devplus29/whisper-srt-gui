@@ -1,5 +1,11 @@
 # 🎙 Whisper SRT GUI
 
+## 📸 Interfața aplicației
+
+<p align="center">
+  <img src="assets/whisper.png" width="900">
+</p>
+
 O aplicație de transcriere pregătită pentru producție, construită cu\
 **faster-whisper** și **Gradio**, concepută pentru transcriere
 audio/video precisă în **format TXT și SRT**, cu funcții avansate de
