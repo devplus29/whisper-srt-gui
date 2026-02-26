@@ -1,0 +1,1 @@
+@echo off\r\ncd /d \"%~dp0\"\r\npython -m venv .venv\r\ncall .\.venv\Scripts\activate.bat\r\npython -m pip install -U pip setuptools wheel\r\npython -m pip install -r requirements.txt\r\npython app.py\r\npause\r\n
